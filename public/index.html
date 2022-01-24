@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Pretend this is a react app</h1>
+
+  <script type="module">
+    const res = await fetch('http://localhost:3000/users')
+    const users = await res.json()
+
+    users.forEach((user) => {
+      document.body.innerHTML += ('<br>' + user.email)
+    })
+    document.body
+  </script>
+</body>
+
+</html>
